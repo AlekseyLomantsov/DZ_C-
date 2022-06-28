@@ -12,8 +12,7 @@ int first = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите второе число, для проверки, является ли первое число квадратом второго");
 int second = Convert.ToInt32(Console.ReadLine());
 int square = second * second;
-if (square == first)
-//if (second * second == first)
+if (square == first)// после if точк с запятой не нужна(заметка для себя)
 {
     Console.WriteLine($"Да, число {first} является квадратом числа {second}");
 }
