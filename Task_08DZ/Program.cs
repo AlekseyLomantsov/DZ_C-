@@ -15,7 +15,3 @@ while (index <= n)
         Console.WriteLine(index);
         index++;
     }
-    else
-    {
-        index++;
-    }
