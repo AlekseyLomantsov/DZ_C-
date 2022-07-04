@@ -7,15 +7,15 @@
 
 // 32679 -> 6
 
-Console.WriteLine("Введите число");
-int num3 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите число");
+// int num3 = Convert.ToInt32(Console.ReadLine());
 
-while (first > 999)
-{
+// while (first > 999)
+// {
     
-    int first = num3 / 10;
-    Console.WriteLine(first); 
-}
+//     int first = num3 / 10;
+//     Console.WriteLine(first); 
+// }
 // if (99 < num3)
 // {
    
