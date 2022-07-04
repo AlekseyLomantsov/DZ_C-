@@ -6,7 +6,7 @@ Console.Write("X: ");
 int x = Convert.ToInt32(Console.ReadLine());
 Console.Write("Y: ");
 int y = Convert.ToInt32(Console.ReadLine());
-
+//int [] xy = Console.ReadLine().Split()./*тут вставить разделитель(сейчас пробел)*/Select(int.Parse).ToArray();
 // if (x > 0 && y > 0) Console.WriteLine("Первая четверть");
 // else if (x < 0 && y > 0) Console.WriteLine("Вторая четверть");
 // else if (x < 0 && y < 0) Console.WriteLine("Третья четверть");
@@ -32,5 +32,5 @@ string Quarter(int xc, int yc)
 //     return result;
 // }
 
-string result = Quarter(x, y);
+string result = Quarter(x, y); //string result = Quarter(xy[0], xy[1]);
 Console.WriteLine(result);
