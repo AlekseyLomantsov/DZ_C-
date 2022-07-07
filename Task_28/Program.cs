@@ -10,12 +10,25 @@ int num = Convert.ToInt32(Console.ReadLine());
 
 int Digital(int number)
 {
-    int temp= 1;
-    for (int i = 1; i <= number; i++)
+        int temp = 1;
+    try
     {
-    temp = i * temp;
+        checked // проверка на переполнение
+        {
+            for (int i = 1; i <= number; i++)
+            {
+                temp = i * temp;
+            }
+        }
+
     }
-    return temp;
+    catch (Exception)
+    {
+        Console.WriteLine("Переполнение типа"); 
+        //break;
+    
+    }
+        return temp;
 }
 int result = Digital(num);
 Console.WriteLine($"Произведение чисел от 1 до {num} = {result}");
