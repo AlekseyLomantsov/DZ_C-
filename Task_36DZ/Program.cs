@@ -44,7 +44,7 @@ int SearchElem(int[] array)
 
 void PrintRes(int res)
 {
-    Console.WriteLine($"Сумма не четных чисел = {res}");
+    Console.WriteLine($"Сумма элементов на не четных позициях массива = {res}");
 }
 
 int[] newArr = CreteArreyRndInt(5, 1, 10);//{-4, -6, 89, 6};
