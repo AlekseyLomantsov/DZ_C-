@@ -20,7 +20,7 @@ int[] Array(int size)
 }
 
 
-void ArrMoreZero(int[] arr)
+int ArrMoreZero(int[] arr)
 {
     int count = 0;
     for (int i = 0; i < arr.Length; i++)
@@ -31,7 +31,13 @@ void ArrMoreZero(int[] arr)
         }
 
     }
-    Console.WriteLine($"Чисел больше нуля введено {count}");
+    return count;
+}
+
+void Print(int num)
+{
+    Console.WriteLine($"Чисел больше нуля введено {num}");
 }
 int[] array = Array(size);/*{0, 7, 8, -2, -2};*/
-ArrMoreZero(array);
+int result = ArrMoreZero(array);
+Print(result);
