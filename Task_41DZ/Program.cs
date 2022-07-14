@@ -7,6 +7,7 @@
 
 Console.WriteLine("Введите колличество цифр: ");
 int size = Convert.ToInt32(Console.ReadLine());
+// string[] input = Console.ReadLine().Split(',').ToArray();
 
 int[] Array(int size)
 {
