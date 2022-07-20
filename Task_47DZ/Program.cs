@@ -13,31 +13,36 @@ double[,] CreteMatrixRndInt(int row, int col, int min, int max)
 {
     double[,] array = new double[row, col];
     Random valueFloatRnd = new Random();
-   
+
     for (int i = 0; i < array.GetLength(0); i++)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            array[i, j] = valueFloatRnd.NextDouble() * (max - min) + min;          
+            array[i, j] = valueFloatRnd.NextDouble() * (max - min) + min;
         }
     }
     return array;
 }
 
 void PrintMatrix(double[,] array)
-{ 
+{
     for (int i = 0; i < array.GetLength(0); i++)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
             if (j == 0) Console.Write("[");
-            if (j < array.GetLength(1) - 1) Console.Write($"{array[i, j], 3},");
-            else Console.Write($"{array[i, j], 3}  ]");   // не понимаю как вывод сделать короче
+            if (j < array.GetLength(1) - 1) Console.Write($"{array[i, j]:F2}, ");
+            else Console.Write($"{array[i, j]:F2}  ]");   // не понимаю как вывод сделать короче
         }
         Console.WriteLine();
     }
 }
 
-double[,] arrayResult = CreteMatrixRndInt(3,4,1,20);
+int row = 3;
+int col = 4;
+int min = 1;
+int max = 20;
+
+double[,] arrayResult = CreteMatrixRndInt(row, col, min, max);
 PrintMatrix(arrayResult);
 

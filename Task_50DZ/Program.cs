@@ -40,19 +40,13 @@ void PrintMatrix(int[,] array)
 
 void PrintResInput(int[,] array, int row, int col)
 {
-    try
+    if (array[row, col] == array.GetLength(0))
     {
-        if (array[row, col] == array.GetLength(0) | array[row, col] == array.GetLength(1))
+        if (array[row, col] == array.GetLength(1))
         {
             Console.WriteLine($"значение на данных координатах: {array[row, col]}");
         }
     }
-    catch (System.Exception)
-{
-        {
-            Console.WriteLine("Такого значения нет");
-        }
-}
 }
 
 Console.WriteLine("Введите искомую строку: ");
@@ -60,6 +54,17 @@ int row = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите искомый столбец: ");
 int col = Convert.ToInt32(Console.ReadLine());
 
-int[,] rndArray = CreteMatrixRndInt(5, 4, 1, 10);
+int rowRndArr = 5;
+int colRndArr = 4;
+int minRndArr = 1;
+int maxRndArr = 10;
+int[,] rndArray = CreteMatrixRndInt(rowRndArr, colRndArr, minRndArr, maxRndArr);
 PrintMatrix(rndArray);
+if (rndArray[row, col] == rndArray[rowRndArr, colRndArr])
+{
 PrintResInput(rndArray, row, col);
+}
+else
+{
+    Console.WriteLine("Такого значения нет");
+}

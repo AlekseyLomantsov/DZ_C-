@@ -51,8 +51,12 @@ void PrintSredArifCol(int[,] array, int row)
     }
 }
 
+int row = 5;
+int col = 4;
+int min = 1;
+int max = 10;
 
-int[,] rndArray = CreteMatrixRndInt(5, 4, 1, 10);
+int[,] rndArray = CreteMatrixRndInt(row, col, min, max);
 PrintMatrix(rndArray);
-PrintSredArifCol(rndArray, 5);
+PrintSredArifCol(rndArray, row);
 
