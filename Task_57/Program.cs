@@ -92,3 +92,4 @@ int[] result = FromMatrixToArray(arrayRnd);
 Array.Sort(result);
 Console.WriteLine();
 PrintArray(result);
+int[,] result1 = Dictionary(result);
